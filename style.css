@@ -1,20 +1,67 @@
 body {
-    background: #f0f0f0;
-    font-family: Arial, sans-serif;
+    background: #FFFFFF; /* Ziraat gibi beyaz arka plan */
+    font-family: 'Roboto', Arial, sans-serif; /* Modern font */
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
+
+.header-strip {
+    background: #D32F2F; /* Ziraat kırmızısı */
+    height: 5px;
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #F5F5F5; /* Hafif gri arka plan */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 h1 {
-    color: #003087;
+    color: #D32F2F; /* Kırmızı başlık */
+    font-size: 28px;
+    margin-bottom: 20px;
 }
+
+form {
+    background: #FFFFFF; /* Form alanı beyaz */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    color: #333333; /* Koyu gri yazı */
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
 input {
-    margin: 10px;
-    padding: 5px;
-    width: 200px;
+    margin: 10px 0;
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    font-size: 14px;
 }
+
 input[type="submit"] {
-    background: #003087;
+    background: #D32F2F; /* Kırmızı buton */
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    -webkit-transition: background 0.3s ease; /* Eski tarayıcılar için */
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: #B71C1C; /* Koyu kırmızı hover efekti */
 }
