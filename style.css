@@ -1,14 +1,14 @@
 body {
-    background: url('background.jpg') no-repeat center center fixed; /* Anıtkabir arka planı */
-    background-size: cover; /* Resmi tam kaplar */
-    font-family: 'Roboto', Arial, sans-serif; /* Modern font */
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Roboto', Arial, sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
 .header-strip {
-    background: #D32F2F; /* Ziraat kırmızısı */
+    background: #D32F2F;
     height: 5px;
     width: 100%;
 }
@@ -17,26 +17,26 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    background: rgba(245, 245, 245, 0.9); /* Hafif gri, yarı saydam */
+    background: rgba(245, 245, 245, 0.9);
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    color: #D32F2F; /* Kırmızı başlık */
+    color: #D32F2F;
     font-size: 28px;
     margin-bottom: 20px;
 }
 
 form {
-    background: rgba(255, 255, 255, 0.95); /* Form alanı beyaz, hafif saydam */
+    background: rgba(255, 255, 255, 0.95);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 label {
-    color: #333333; /* Koyu gri yazı */
+    color: #333333;
     font-size: 16px;
     display: block;
     margin-bottom: 5px;
@@ -52,17 +52,17 @@ input {
 }
 
 input[type="submit"] {
-    background: #D32F2F; /* Kırmızı buton */
+    background: #D32F2F;
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 4px;
     font-size: 16px;
-    -webkit-transition: background 0.3s ease; /* Eski tarayıcılar için */
+    -webkit-transition: background 0.3s ease;
     transition: background 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background: #B71C1C; /* Koyu kırmızı hover efekti */
+    background: #B71C1C;
 }
